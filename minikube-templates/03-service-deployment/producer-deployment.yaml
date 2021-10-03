@@ -1,0 +1,39 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: producer-service
+  labels:
+    name: producer-service
+    app: kafka
+spec:
+  ports:
+    - port: 8383      
+      targetPort: 8383  
+      protocol: TCP
+  selector:           
+    app: producer-service
+    app: kafka    
+
+---
+apiVersion: apps/v1 
+kind: Deployment    
+metadata:              
+  name: producer-service
+spec:                
+  selector:         
+    matchLabels:
+      app: producer-service
+      app: kafka
+  replicas: 1        
+  template:
+    metadata:
+      labels:        
+        app: producer-service
+        app: kafka
+    spec:
+      containers:
+        - name: producer-service
+          image: talk2me19/producer-service:v1
+          ports:
+            - containerPort: 8383       
+             
