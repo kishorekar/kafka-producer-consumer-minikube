@@ -35,4 +35,10 @@ If you are using minikube, then need to do following steps-
 4. Then use the consumer-service ExternalIP:30082 and use swagger and event end points.
 
 #Swagger screenshot
+ 
  ![image](https://user-images.githubusercontent.com/78093371/135738786-93e8310b-2996-4a4b-bf5c-1f9e6ed13975.png)
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/78093371/135738826-e332e194-4f28-49ee-96b0-936dfc8519a7.png)
+
+ 
